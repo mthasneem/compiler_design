@@ -1,0 +1,8 @@
+p = 15; q=3;
+while (p > q) {
+   if (p < q)
+     p = p - q;
+    else
+      q = q + p;
+}
+print q;

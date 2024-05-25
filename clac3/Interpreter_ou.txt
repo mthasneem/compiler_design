@@ -1,0 +1,28 @@
+	push	15
+	pop	p
+	push	3
+	pop	q
+L000:
+	push	p
+	push	q
+	compGT
+	jz	L001
+	push	p
+	push	q
+	compLT
+	jz	L002
+	push	p
+	push	q
+	sub
+	pop	p
+	jmp	L003
+L002:
+	push	q
+	push	p
+	add
+	pop	q
+L003:
+	jmp	L000
+L001:
+	push	q
+	print
